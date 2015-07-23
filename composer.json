@@ -10,6 +10,20 @@
     "task",
     "ssh"
   ],
+  "repositories": [
+    {
+        "type":"package",
+        "package": {
+          "name": "hanhan/remote",
+          "version":"1.0",
+          "source": {
+              "url": "https://github.com/hanhan1978/remote.git",
+              "type": "git",
+              "reference":"feature/agent-forward"
+            }
+        }
+    }
+  ],
   "authors": [
     {
       "name": "Maxime Fabre",
@@ -25,7 +39,8 @@
     "illuminate/container": "^4.2.7",
     "illuminate/filesystem": "~4.2",
     "illuminate/events": "~4.2",
-    "illuminate/remote": "~4.2",
+    "hanhan/remote": "*",
+    "phpseclib/phpseclib": "1.0.x-dev",
     "illuminate/log": "~4.2",
     "patchwork/utf8": "~1.1",
     "d11wtq/boris": "~1.0.8",
@@ -55,7 +70,8 @@
   ],
   "autoload": {
     "psr-4": {
-      "Rocketeer\\": "src/Rocketeer"
+      "Rocketeer\\": "src/Rocketeer",
+      "Illuminate\\Remote\\": "vendor/hanhan/remote"
     }
   },
   "autoload-dev": {
